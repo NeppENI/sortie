@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    max-height: 100px;
+}
+
+.nav-logo {
+    width: 50%;
+}
+.nav-logo img {
+    height: 100%;
+    margin-left: 2rem;
+}
+.nav-menu {
+    display: flex;
+    width: 50%;
+}
+.nav-menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: calc(15px + 2rem);
+}
+
+.infos {
+    font-size: 1.2rem;
+    margin-left: 85%;
+}

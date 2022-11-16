@@ -1,13 +1,172 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sortie entre élèves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortir.com</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 </head>
+
 <body>
-    <h1>Page d'accueil du site</h1>
+
+<header>
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
+        </div>
+
+        <div class="nav-menu">
+            <ul>
+                <a href="#"><li>Villes</li></a>
+                <a href="#"><li>Campus</li></a>
+                <a href="#"><li>Accueil</li></a>
+                <a href="#"><li>Mon profil</li></a>
+                <a href="#"><li>Se déconnecter</li></a>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="infos">
+        <div class="infos-date">
+            <h4>Placeholder date</h4>
+        </div>
+
+        <div class="infos-user">
+            <h4>Placeholder user</h4>
+        </div>
+    </div>
+</section>
+
+<section id="filters">
+    <div class="rendered-form">
+        <div class="formbuilder-select form-group field-campus-form">
+            <label for="campus-form" class="formbuilder-select-label"
+            >Campus :<span class="formbuilder-required"></span
+                ></label>
+            <select
+                    class="campus-form"
+                    name="campus-form"
+                    id="campus-form"
+                    required="required"
+                    aria-required="true"
+            >
+                <option disabled="null" selected="null">Nantes</option>
+                <option id="campus-form-0">Nantes</option>
+                <option id="campus-form-1">Rennes</option>
+                <option id="campus-form-2">Quimper</option>
+                <option id="campus-form-3">Niort</option>
+            </select>
+        </div>
+        <div class="formbuilder-text form-group field-text-1668537923384">
+            <label for="text-1668537923384" class="formbuilder-text-label"
+            >Le nom de la sortie contient :</label
+            >
+            <input
+                    type="text"
+                    class="form-control"
+                    name="text-1668537923384"
+                    access="false"
+                    id="text-1668537923384"
+            />
+        </div>
+        <div class="formbuilder-date form-group field-date-1668537929895">
+            <label for="date-1668537929895" class="formbuilder-date-label"
+            >Entre</label
+            >
+            <input
+                    type="date"
+                    class="form-control"
+                    name="date-1668537929895"
+                    access="false"
+                    id="date-1668537929895"
+            />
+        </div>
+        <div class="formbuilder-date form-group field-date-1668537946736">
+            <label for="date-1668537946736" class="formbuilder-date-label"
+            >et</label
+            >
+            <input
+                    type="date"
+                    class="form-control"
+                    name="date-1668537946736"
+                    access="false"
+                    id="date-1668537946736"
+            />
+        </div>
+        <div class="formbuilder-checkbox-group form-group field-checkbox-group">
+            <label
+                    for="checkbox-group"
+                    class="formbuilder-checkbox-group-label"
+            ></label>
+            <div class="checkbox-group">
+                <div class="formbuilder-checkbox">
+                    <input
+                            class="checkbox-group"
+                            name="checkbox-group[]"
+                            access="false"
+                            id="checkbox-group-0"
+                            type="checkbox"
+                            checked="checked"
+                    />
+                    <label for="checkbox-group-0"
+                    >Sorties dont je suis l'organisateur</label
+                    >
+                </div>
+                <div class="formbuilder-checkbox">
+                    <input
+                            class="checkbox-group"
+                            name="checkbox-group[]"
+                            access="false"
+                            id="checkbox-group-1"
+                            type="checkbox"
+                            checked="checked"
+                    />
+                    <label for="checkbox-group-1"
+                    >Sorties auxquelles je suis isncrit/e</label
+                    >
+                </div>
+                <div class="formbuilder-checkbox">
+                    <input
+                            class="checkbox-group"
+                            name="checkbox-group[]"
+                            access="false"
+                            id="checkbox-group-2"
+                            type="checkbox"
+                            checked="checked"
+                    />
+                    <label for="checkbox-group-2"
+                    >Sorties auxquelles je ne suis pas inscrit/e</label
+                    >
+                </div>
+                <div class="formbuilder-checkbox">
+                    <input
+                            class="checkbox-group"
+                            name="checkbox-group[]"
+                            access="false"
+                            id="checkbox-group-3"
+                            type="checkbox"
+                    />
+                    <label for="checkbox-group-3">Sorties passées</label>
+                </div>
+            </div>
+        </div>
+        <div class="formbuilder-button form-group field-btn-search">
+            <button
+                    type="submit"
+                    class="btn-default btn"
+                    name="btn-search"
+                    value="Rechercher"
+                    access="false"
+                    id="btn-search"
+            >
+                Rechercher
+            </button>
+        </div>
+    </div>
+</section>
 </body>
 </html>
