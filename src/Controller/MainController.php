@@ -30,7 +30,7 @@ class MainController extends AbstractController
     #[Route ("/profil" , name:"main_profil")]
     public function profil(): \Symfony\Component\HttpFoundation\Response
     {
-        return $this->render('');
+        return $this->render('profil.html.twig');
     }
 
 }

@@ -12,6 +12,7 @@
 <body>
 
 <header>
+    {% block header %}
     <div class="navbar">
         <div class="nav-logo">
             <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
@@ -19,7 +20,7 @@
 
         <div class="nav-menu">
             <ul>
-                <a href="#"><li>Villes TESTOUILLE</li></a>
+                <a href="#"><li>Villes Test</li></a>
                 <a href="#"><li>Campus</li></a>
                 <a href="#"><li>Accueil</li></a>
                 <a href="#"><li>Mon profil</li></a>
@@ -27,6 +28,7 @@
             </ul>
         </div>
     </div>
+    {% endblock %}
 </header>
 
 <section>
