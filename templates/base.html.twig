@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Sortie {% endblock %}</title>
+</head>
+<body>
+    <header>
+            <h1>Sortie</h1>
+        <nav>
+            <ul>
+                <li><a href="#" title="Villes">Villes</a></li>
+                <li><a href="#" title="Campus">Campus</a></li>
+                <li><a href="#" title="Mon profil">Mon profil</a></li>
+                <li><a href="#" title="Se déconnecter">Se déconnecter</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+    <main>
+        {%block bidy %}{% endblock %}
+    </main>
+    <footer>
+        <div>&copy; {{ "now"|date ("y") }} Sortie</div>
+    </footer>
+</body>
+</html>
