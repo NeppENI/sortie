@@ -5,27 +5,39 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Sortie {% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+
+    <title>{% block title %}Sortir.com {% endblock %}</title>
+
 </head>
+
 <body>
     <header>
-            <h1>Sortie</h1>
-        <nav>
-            <ul>
-                <li><a href="#" title="Villes">Villes</a></li>
-                <li><a href="#" title="Campus">Campus</a></li>
-                <li><a href="#" title="Mon profil">Mon profil</a></li>
-                <li><a href="#" title="Se déconnecter">Se déconnecter</a></li>
-            </ul>
-        </nav>
-        
+        {% block header %}
+            <div class="navbar">
+                <div class="nav-logo">
+                    <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
+                </div>
+
+                <div class="nav-menu">
+                    <ul>
+                        <a href="#" title="Villes"><li>Villes</li></a>
+                        <a href="#" title="Campus"><li>Campus</li></a>
+                        <a href="#" title="Accueil"><li>Accueil</li></a>
+                        <a href="#" title="Profil"><li>Mon profil</li></a>
+                        <a href="#" title="Deconnection"><li>Se déconnecter</li></a>
+                    </ul>
+                </div>
+            </div>
+        {% endblock %}
         
     </header>
     <main>
         {%block body %}{% endblock %}
     </main>
     <footer>
-        <div>&copy; {{ "now"|date ("y") }} Sortie</div>
+        <div>&copy; {{ "now"|date ("Y") }} Sortir.com</div>
     </footer>
 </body>
 </html>*

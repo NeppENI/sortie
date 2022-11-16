@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 li {
     list-style-type: none;
@@ -34,3 +31,21 @@ li {
     font-size: 1.2rem;
     margin-left: 85%;
 }
+
+.form-container {
+    display: block;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.form-container input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top : 50px;
+}
+

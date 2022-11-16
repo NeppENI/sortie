@@ -1,3 +1,4 @@
+{% extends'base.html.twig' %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
 
         <div class="nav-menu">
             <ul>
-                <a href="#"><li>Villes Test</li></a>
+                <a href="#"><li>Villes</li></a>
                 <a href="#"><li>Campus</li></a>
                 <a href="#"><li>Accueil</li></a>
                 <a href="#"><li>Mon profil</li></a>
@@ -34,7 +35,7 @@
 <section>
     <div class="infos">
         <div class="infos-date">
-            <h4>Placeholder date</h4>
+            <h4>{{ "now"|date ("YYYY-MM-DD") }}</h4>
         </div>
 
         <div class="infos-user">
