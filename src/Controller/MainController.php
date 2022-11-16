@@ -27,4 +27,10 @@ class MainController extends AbstractController
         return $this->render('login.html.twig');
     }
 
+    #[Route ("/profil" , name:"main_profil")]
+    public function profil(): \Symfony\Component\HttpFoundation\Response
+    {
+        return $this->render('');
+    }
+
 }

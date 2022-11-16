@@ -34,3 +34,7 @@ li {
     font-size: 1.2rem;
     margin-left: 85%;
 }
+
+p {
+    font-style: italic;
+}
