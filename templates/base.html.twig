@@ -25,7 +25,11 @@
                         <a href="#" title="Villes"><li>Villes</li></a>
                         <a href="#" title="Campus"><li>Campus</li></a>
                         <a href="#" title="Profil"><li>Mon profil</li></a>
-                        <a href="#" title="Deconnection"><li>Se déconnecter</li></a>
+                        <a href="{{ path('app_logout') }}" title="Deconnection"><li>Se déconnecter</li></a>
+                        <a href="#" title="Profil"><li>Mon profil</li></a>
+                        <a href="{{ path('app_register') }}" title="CréationProfil"><li>Créer un profil</li>
+                            {# todo quand tout le monde a un compte admin, mettre le lien accessible Admin et supprimer le lien accessible à tous #}
+
                     </ul>
                 </div>
             </div>
