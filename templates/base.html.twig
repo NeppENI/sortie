@@ -14,7 +14,6 @@
 
 <body>
     <header>
-        {% block header %}
             <div class="navbar">
                 <div class="nav-logo">
                     <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
@@ -22,22 +21,21 @@
 
                 <div class="nav-menu">
                     <ul>
+                        <a href="#" title="Accueil"><li>Accueil</li></a>
                         <a href="#" title="Villes"><li>Villes</li></a>
                         <a href="#" title="Campus"><li>Campus</li></a>
-                        <a href="#" title="Accueil"><li>Accueil</li></a>
                         <a href="#" title="Profil"><li>Mon profil</li></a>
                         <a href="#" title="Deconnection"><li>Se déconnecter</li></a>
                     </ul>
                 </div>
             </div>
-        {% endblock %}
-        
     </header>
+
     <main>
         {%block body %}{% endblock %}
     </main>
     <footer>
-        <div>&copy; {{ "now"|date ("Y") }} Sortir.com</div>
+        <div>&copy; {{ "now"|date ("Y") }} | Sortir.com</div>
     </footer>
 </body>
-</html>*
+</html>

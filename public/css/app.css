@@ -4,21 +4,32 @@ li {
     list-style-type: none;
 }
 
+button {
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px black;
+}
+
 .navbar {
     display: flex;
-    max-height: 100px;
+    max-height: 125px;
+    background: rgba(40, 40, 40, 0.28);
+    margin-bottom: 50px;
+    border: 2px solid rgba(40, 40, 40, 0.58);
+    border-radius: 5px;
 }
 
 .nav-logo {
-    width: 50%;
+    width: 40%;
 }
 .nav-logo img {
-    height: 100%;
+    height: 80%;
     margin-left: 2rem;
+    margin-top: 10px;
 }
 .nav-menu {
     display: flex;
-    width: 50%;
+    width: 60%;
 }
 .nav-menu ul {
     width: 100%;
@@ -36,9 +47,6 @@ li {
     display: block;
 }
 
-button {
-    border-radius: 5px;
-}
 
 .form-container input {
     display: block;
@@ -48,4 +56,56 @@ button {
 footer {
     margin-top : 50px;
 }
+
+
+/****************
+LOGIN PAGE
+ ****************/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-loginpage label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+}
+
+.form-loginpage input {
+    display: inline-block;
+    float: left;}
+
+.fieldset-loginpage {
+    border: 2px solid #282828;
+    width: 100%;
+}
+.connexion-loginpage-toppart {
+    height: 60px;
+}
+.connexion-loginpage-subpart {
+    display: flex;
+}
+.connexion-subpart {
+    width: 40%;
+}
+.rememberme-plus-password {
+    display: block;
+    width: 60%;
+}
+.rememberme {
+    display: flex;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
 
