@@ -26,9 +26,10 @@
                          <li><a href="#" title="Campus">Campus</a></li>
                         {% if app.user %}
                          <li><a href="#" title="Profil">Mon profil</a></li>
-                         <li><a href="#"{{ path('app_logout') }}" title="Deconnection">Se déconnecter ({{ app.user.pseudo }})</a></li>
+                         <li><a href="{{ path('app_logout') }}" title="Deconnection">Se déconnecter ({{ app.user.pseudo }})</a></li>
                         {% else %}
-                        <a href="#"{{ path('app_register') }}" title="CréationProfil"><li>Créer un profil</li></a>
+                          <li><a href="{{ path('app_login') }}" title="Login">Se connecter</a></li>
+                          <li><a href="{{ path('app_register') }}" title="CréationProfil">Créer un profil</a></li>
                             {# todo quand tout le monde a un compte admin, mettre le lien accessible Admin et supprimer le lien accessible à tous #}
                         {% endif %}
                     </ul>
