@@ -41,8 +41,9 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('confirmation')
         ;
-       //todo ajouter campus et confirmation mdp
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void
