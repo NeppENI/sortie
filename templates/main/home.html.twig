@@ -1,41 +1,11 @@
 {% extends'base.html.twig' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sortir.com</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-</head>
-
-<body>
-
-<header>
-    {% block header %}
-    <div class="navbar">
-        <div class="nav-logo">
-            <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
-        </div>
-
-        <div class="nav-menu">
-            <ul>
-                <a href="#"><li>Villes</li></a>
-                <a href="#"><li>Campus</li></a>
-                <a href="#"><li>Accueil</li></a>
-                <a href="#"><li>Mon profil</li></a>
-                <a href="#"><li>Se déconnecter</li></a>
-            </ul>
-        </div>
-    </div>
-    {% endblock %}
-</header>
+{% block body %}
 
 <section>
     <div class="infos">
         <div class="infos-date">
-            <h4>{{ "now"|date ("YYYY-MM-DD") }}</h4>
+            <h4>{{ "now"|date ("Y-M-D") }}</h4>
         </div>
 
         <div class="infos-user">
@@ -171,5 +141,7 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>
+{% endblock %}
