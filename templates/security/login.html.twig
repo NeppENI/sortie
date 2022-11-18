@@ -3,10 +3,12 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+  <div class="login-container">
+    <form method="post" class="form-loginpage">
+      <fieldset class="fieldset-loginpage">
+        {% if error %}
+         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
     {% if app.user %}
         <div class="mb-3">
@@ -14,26 +16,37 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <div class="connexion-loginpage-toppart">
+      <div>
+        <label for="inputEmail">Email :</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+      </div>
+
+      <div>
+        <label for="inputPassword">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+      </div>
+    </div>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
 
+    <div class="connexion-loginpage-subpart">
+      <div class="connexion-subpart">
+        <button type="submit" id='connexion' name="connexion">Connexion</button>
+      </div>
 
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" name="_remember_me"> Se souvenir de moi
-        </label>
+      <div class="rememberme-plus-password">
+        <div class="rememberme">
+          <input type="checkbox" id="rememberme" name="rememberme" value="Se souvenir de moi">
+          <label for="rememberme"> Se souvenir de moi</label><br>
+        </div>
+        <a href="#" id="forgottenpassword">Mot de passe oublié ?</a>
+      </div>
     </div>
 
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Connexion
-    </button>
-</form>
+      </fieldset>
+    </form>
+  </div>
 {% endblock %}
