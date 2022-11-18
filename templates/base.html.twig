@@ -21,14 +21,16 @@
 
                 <div class="nav-menu">
                     <ul>
-                        <a href="#" title="Accueil"><li>Accueil</li></a>
-                        <a href="#" title="Villes"><li>Villes</li></a>
-                        <a href="#" title="Campus"><li>Campus</li></a>
-                        <a href="#" title="Profil"><li>Mon profil</li></a>
-                        <a href="#"{{ path('app_logout') }}" title="Deconnection"><li>Se déconnecter</li></a>
-                        <a href="#" title="Profil"><li>Mon profil</li></a>
+                         <li><a href="#" title="Accueil">Accueil</a></li>
+                         <li><a href="#" title="Villes">Villes</a></li>
+                         <li><a href="#" title="Campus">Campus</a></li>
+                        {% if app.user %}
+                         <li><a href="#" title="Profil">Mon profil</a></li>
+                         <li><a href="#"{{ path('app_logout') }}" title="Deconnection">Se déconnecter ({{ app.user.pseudo }})</a></li>
+                        {% else %}
                         <a href="#"{{ path('app_register') }}" title="CréationProfil"><li>Créer un profil</li></a>
                             {# todo quand tout le monde a un compte admin, mettre le lien accessible Admin et supprimer le lien accessible à tous #}
+                        {% endif %}
                     </ul>
                 </div>
             </div>

@@ -4,13 +4,18 @@
 
 <section>
     <div class="infos">
-        <div class="infos-date">
-            <h4>{{ "now"|date ("Y-M-D") }}</h4>
+        <div class="infos-user">
+            {% if app.user %}
+            <h4>Bienvenue {{ app.user.pseudo }} !</h4>
+            {% else %}
+            <h4>Bienvenue !</h4>
+            {% endif %}
         </div>
 
-        <div class="infos-user">
-            <h4>Placeholder user</h4>
+        <div class="infos-date">
+            <h4>Nous sommes le{{ "now"|date ("D-M-Y") }}</h4>
         </div>
+
     </div>
 </section>
 
