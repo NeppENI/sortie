@@ -31,12 +31,21 @@
                         {% else %}
                           <li><a href="{{ path('app_login') }}" title="Login">Se connecter</a></li>
                           <li><a href="{{ path('app_register') }}" title="CréationProfil">Créer un profil</a></li>
-                            {# todo quand tout le monde a un compte admin, mettre le lien accessible Admin et supprimer le lien accessible à tous #}
+                            {# todo gérer l'affichage des liens suivant role admin/user #}
                         {% endif %}
                     </ul>
                 </div>
             </div>
     </header>
+
+    {# read and display all flash messages #}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     <main>
         {%block body %}{% endblock %}

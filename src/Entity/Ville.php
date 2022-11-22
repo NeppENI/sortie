@@ -13,11 +13,11 @@ class Ville
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 75)]
+    #[ORM\Column(type: 'string', length: 80)]
     private $nom;
 
-    #[ORM\Column(type: 'string', length: 10)]
-    private $codePostal;
+    #[ORM\Column(type: 'string', length: 5)]
+    private $code_postal;
 
     public function getId(): ?int
     {
@@ -38,12 +38,12 @@ class Ville
 
     public function getCodePostal(): ?string
     {
-        return $this->codePostal;
+        return $this->code_postal;
     }
 
-    public function setCodePostal(string $codePostal): self
+    public function setCodePostal(string $code_postal): self
     {
-        $this->codePostal = $codePostal;
+        $this->code_postal = $code_postal;
 
         return $this;
     }

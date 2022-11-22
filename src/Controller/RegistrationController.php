@@ -20,7 +20,7 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
-        $user->setRoles(["ROLE_USER"]); //todo a changer par "ROLE_USER" quand on aura chacun notre admin
+        $user->setRoles(["ROLE_ADMIN"]); //todo a changer par "ROLE_USER" quand on aura chacun notre admin
 
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
@@ -49,5 +49,4 @@ class RegistrationController extends AbstractController
             'registrationForm' => $form->createView(),
         ]);
     }
-
 }
