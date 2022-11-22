@@ -13,7 +13,7 @@ class Campus
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 100)]
+    #[ORM\Column(type: 'string', length: 80)]
     private $nom;
 
     public function getId(): ?int

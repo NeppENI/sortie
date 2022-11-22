@@ -10,25 +10,21 @@ class MainController extends AbstractController
 {
 
     #[Route ("/" , name:"main_home")]
-    public function home()
+    public function home(): \Symfony\Component\HttpFoundation\Response
     {
         return $this->render('main/home.html.twig');
     }
 
     #[Route ("/profil" , name:"main_profil")]
-    public function profil()
+    public function profil(): \Symfony\Component\HttpFoundation\Response
     {
         return $this->render('main/profil.html.twig');
     }
 
-    #[Route ("/admin/campus" , name:"admin_campus")]
-    public function campus()
-    {
-        return $this->render('admin/campus.html.twig');
-    }
 
-    #[Route ("/admin/ville" , name:"admin_campus")]
-    public function ville()
+
+    #[Route ("/admin/ville" , name:"admin_ville")]
+    public function ville(): \Symfony\Component\HttpFoundation\Response
     {
         return $this->render('admin/ville.html.twig');
     }
