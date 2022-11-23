@@ -33,9 +33,16 @@
         >
             Rechercher
         </button>
-
     </div>
-    <div>{{app.Campus.nom }}</div>
+
+    <section>
+
+        {% for campus in campus %}
+        <li>{{ campus.nom }}</li>
+        {% endfor %}
+
+    </section>
+
     <div>
          {{ form_start(campusForm)}}
         {{ form_widget(campusForm)}}
