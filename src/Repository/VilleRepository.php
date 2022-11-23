@@ -39,6 +39,13 @@ class VilleRepository extends ServiceEntityRepository
         }
     }
 
+    public function list()
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $query = $queryBuilder->getQuery();
+        $results= $query->getResult();
+        return $results;
+    }
 //    /**
 //     * @return Ville[] Returns an array of Ville objects
 //     */
