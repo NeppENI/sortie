@@ -14,15 +14,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class CampusController extends AbstractController
 {
     #[Route('admin/campus', name: 'campus_list')]
-//
-//    public function list(CampusRepository $campusRepository):Response
-//    {
-//        $campus = $campusRepository->findAll("");
-//        return $this->render('admin/campus.html.twig',[
-//            "campus" => $campus
-//    ]);
-//    }
 
+    public function index(CampusRepository $campusRepository):Response
+    {
+        $campus = $campusRepository->findAll();
+        return $this->render('admin/campus.html.twig',[
+            'campus' => $campus ]);
+    }
+
+    #[Route('admin/campus/form', name: 'campus_form')]
     public function create(Request $request, EntityManagerInterface $entityManager):Response
     {
         $campus = new Campus();

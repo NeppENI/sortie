@@ -39,7 +39,7 @@ class CampusRepository extends ServiceEntityRepository
         }
     }
 
-    public function list()
+    public function index()
     {
         $queryBuilder = $this->createQueryBuilder('c');
         $query = $queryBuilder->getQuery();
