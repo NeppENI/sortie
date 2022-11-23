@@ -37,9 +37,17 @@ class CampusRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-
-
     }
+
+    public function list()
+    {
+        $queryBuilder = $this->createQueryBuilder('c');
+        $query = $queryBuilder->getQuery();
+        $results= $query->getResult();
+        return $results;
+    }
+
+
 
 //    /**
 //     * @return Campus[] Returns an array of Campus objects
