@@ -21,9 +21,5 @@ class MainController extends AbstractController
         return $this->render('main/profil.html.twig');
     }
 
-    #[Route ("/admin/ville" , name:"admin_ville")]
-    public function ville(): \Symfony\Component\HttpFoundation\Response
-    {
-        return $this->render('admin/ville.html.twig');
-    }
+
 }

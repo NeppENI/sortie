@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des villes{% endblock %}
+
+{% block body %}
+    <h1>Création d'une ville</h1>
+
+
+
+    <div>
+        {{ form_start(villeForm) }}
+        {{ form_widget(villeForm) }}
+        <button>ajouter la ville</button>
+        {{ form_end(villeForm) }}
+    </div>
+
+
+
+{% endblock %}
+
+

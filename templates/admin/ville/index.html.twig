@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des villes{% endblock %}
+
+{% block body %}
+    <h1>Gestion des villes</h1>
+
+    <h2>Filtrer les sites</h2>
+    <div class="formbuilder-text form-group field-text-1668537923384">
+        <label for="text-1668537923384" class="formbuilder-text-label"
+        >Le nom contient :</label
+        >
+        <input
+                type="text"
+                class="form-control"
+                name="text-1668537923384"
+                access="false"
+                id="text-1668537923384"
+        />
+    </div>
+    <div>
+
+
+    </div>
+    <div class="formbuilder-button form-group field-btn-search">
+        <button
+                type="submit"
+                class="btn-default btn"
+                name="btn-search"
+                value="Rechercher"
+                access="false"
+                id="btn-search"
+        >
+            Rechercher
+        </button>
+    </div>
+
+    <section>
+
+        {% for ville in ville %}
+            <li>{{ ville.nom }}</li>
+        {% endfor %}
+
+    </section>
+
+    <p>Tu veux ajouter une ville? </p>
+    <form action="{{ path('ville_form') }}">
+        <button type="submit">Clic ici</button>
+    </form>
+
+{% endblock %}
+
+
