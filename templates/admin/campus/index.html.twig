@@ -43,12 +43,11 @@
 
     </section>
 
-    <div>
-         {{ form_start(campusForm)}}
-        {{ form_widget(campusForm)}}
-        <button>enregistrer</button>
-        {{ form_end(campusForm)}}
+    <p>Tu veux ajouter un campus? </p>
+    <button>
+        <a href="/admin/campus/create" title="CréationCampus"></a>
+        Clic ici
+    </button>
 
-    </div>
 
 {% endblock %}

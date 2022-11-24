@@ -39,7 +39,7 @@ class VilleRepository extends ServiceEntityRepository
         }
     }
 
-    public function list()
+    public function index()
     {
         $queryBuilder = $this->createQueryBuilder('v');
         $query = $queryBuilder->getQuery();

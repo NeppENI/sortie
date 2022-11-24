@@ -13,32 +13,33 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CampusController extends AbstractController
 {
-    #[Route('admin/campus', name: 'campus_list')]
+    #[Route('admin/campus/index', name: 'campus_index')]
 
-    public function index(CampusRepository $campusRepository):Response
+        public function index(CampusRepository $campusRepository): Response
     {
-        $campus = $campusRepository->findAll();
-        return $this->render('admin/campus.html.twig',[
-            'campus' => $campus ]);
-    }
-
-    #[Route('admin/campus/form', name: 'campus_form')]
-    public function create(Request $request, EntityManagerInterface $entityManager):Response
-    {
-        $campus = new Campus();
-        $campusForm = $this->createForm(CampusFormType::class, $campus);
-
-        $campusForm->handleRequest($request);
-        if($campusForm->isSubmitted()){
-            $entityManager->persist($campus);
-            $entityManager->flush();
-        $this->addFlash('success', 'campus ajouté!');
+            $campus = $campusRepository->findAll();
+            return $this->render('admin/campus/index.html.twig',[
+                'campus' => $campus ]);
         }
 
-        return $this->render('admin/campus.html.twig',[
+   #[Route('admin/campus/create', name: 'campus_form')]
+
+        public function create(Request $request, EntityManagerInterface $entityManager):Response
+        {
+            $campus = new Campus();
+            $campusForm = $this->createForm(CampusFormType::class, $campus);
+
+            $campusForm->handleRequest($request);
+            if($campusForm->isSubmitted()){
+                $entityManager->persist($campus);
+                $entityManager->flush();
+            $this->addFlash('success', 'campus ajouté!');
+            }
+
+            return $this->render('admin/campus/create.html.twig',[
             "campusForm" => $campusForm->createView(),
         ]);
-    }
+        }
 
 
 }
