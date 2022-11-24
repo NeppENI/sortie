@@ -7,6 +7,24 @@ li {
     list-style-type: none;
 }
 
+label {
+    display: block;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 250px;
+    max-width: 50%;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
 button {
     border-radius: 5px;
     padding: 10px;
@@ -114,9 +132,7 @@ LOGIN PAGE
 CREATE SORTIE
  **************/
 
-label {
-    display: block;
-}
+
 
 
 

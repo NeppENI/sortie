@@ -9,6 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use http\Env\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
 * @Route("/sortie", name="sortie_")
@@ -42,12 +43,21 @@ class SortieController extends AbstractController
     /**
      * @Route("/create/{id}", name="create")
      */
-    public function create(): \Symfony\Component\HttpFoundation\Response
+    public function create(
+        Request $request,
+        EntityManagerInterface $entityManager
+    ): \Symfony\Component\HttpFoundation\Response
     {
         $sortie = new Sortie();
         $sortieForm = $this->createForm(SortieType::class, $sortie);
 
-        //todo traiter le formulaire
+        $sortieForm->handleRequest($request);
+
+        if ($sortieForm->isSubmitted()){
+            $entityManager->persist($sortie);
+            $entityManager->flush();
+        }
+
 
         return $this->render('main/sortie/create.html.twig',[
             'sortieForm' => $sortieForm->createView()
