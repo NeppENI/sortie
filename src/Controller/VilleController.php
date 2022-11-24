@@ -13,29 +13,30 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class VilleController extends AbstractController
 {
-    #[Route('admin/ville', name: 'ville_list')]
+    #[Route('admin/ville/index', name: 'ville_index')]
 
     public function index(villeRepository $villeRepository):Response
     {
         $ville = $villeRepository->findAll();
-        return $this->render('admin/ville.html.twig',[
+        return $this->render('admin/ville/index.html.twig',[
             'ville' => $ville ]);
     }
 
-//    public function create(Request $request, EntityManagerInterface $entityManager):Response
-//    {
-//        $ville = new Ville();
-//        $villeForm = $this->createForm(VilleFormType::class, $ville);
-//
-//        $villeForm->handleRequest($request);
-//        if($villeForm->isSubmitted()){
-//            $entityManager->persist($ville);
-//            $entityManager->flush();
-//        $this->addFlash('success', 'ville ajoutée!');
-//        }
-//
-//        return $this->render('admin/ville.html.twig',[
-//            "villeForm" => $villeForm->createView(),
-//        ]);
-//    }
+    #[Route('admin/ville/create', name: 'ville_form')]
+    public function create(Request $request, EntityManagerInterface $entityManager):Response
+    {
+        $ville = new Ville();
+        $villeForm = $this->createForm(VilleFormType::class, $ville);
+
+        $villeForm->handleRequest($request);
+        if($villeForm->isSubmitted()){
+            $entityManager->persist($ville);
+            $entityManager->flush();
+        $this->addFlash('success', 'ville ajoutée!');
+        }
+
+        return $this->render('admin/ville/create.html.twig',[
+            "villeForm" => $villeForm->createView(),
+        ]);
+    }
 }
