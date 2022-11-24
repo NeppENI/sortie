@@ -44,10 +44,9 @@
     </section>
 
     <p>Tu veux ajouter une ville? </p>
-    <button>
-        <a href="http://localhost/sortie/public/admin/ville/create" title="CréationVille"> clic ici</a>
-
-    </button>
+    <form action="{{ path('ville_form') }}">
+        <button type="submit">Clic ici</button>
+    </form>
 
 {% endblock %}
 

@@ -44,10 +44,9 @@
     </section>
 
     <p>Tu veux ajouter un campus? </p>
-    <button>
-        <a href="http://localhost/sortie/public/admin/campus/create" title="CréationCampus">Clic ici</a>
-
-    </button>
+    <form action="{{ path('campus_form') }}">
+        <button type="submit">Clic ici</button>
+    </form>
 
 
 {% endblock %}
