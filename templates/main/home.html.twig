@@ -104,7 +104,7 @@
                             checked="checked"
                     />
                     <label for="checkbox-group-1"
-                    >Sorties auxquelles je suis isncrit/e</label
+                    >Sorties auxquelles je suis inscrit/e</label
                     >
                 </div>
                 <div class="formbuilder-checkbox">
@@ -147,6 +147,35 @@
     </div>
 </section>
 
+<section>
+    <table class="home-table">
+        <thead>
+        <tr>
+            <td>Nom de la sortie</td>
+            <td>Date de la sortie</td>
+            <td>Clôture</td>
+            <td>Nombre de places</td>
+            <td>Etat</td>
+            <td>Inscrit</td>
+            <td>Organisateur</td>
+            <td>Actions</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for sortie in sorties %}
+        <tr>
+            <td> {{ sortie.nom }}</td>
+        </tr> {% endfor %}
+
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+
 </body>
 </html>
+
 {% endblock %}
+
