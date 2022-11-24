@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{%  block body %}
+  <section>
+    {%  for sortie in sorties %}
+    <article>
+      <a href="{{ path('sortie_details', {'id' : sortie.id}) }}" title="Voir les infos de la sortie">
+        {{ sortie.nomDeLaSortie }}
+      </a>
+    </article>
+
+    {% endfor %}
+  </section>
+{% endblock %}
+
+{% block title %}{{ parent() }} | Sortie Home Page {% endblock %}

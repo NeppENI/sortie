@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <div class="form-container">
+            <form method="POST">
+                <h3>Modifier votre profil :</h3>
+
+                <h3>Infos actuelle :</h3>
+                <h4>{{ app.user.pseudo }}</h4>
+                <h4>{{ app.user.prenom }}</h4>
+                <h4>{{ app.user.nom }}</h4>
+                <h4>{{ app.user.email }}</h4>
+                <label>
+                    Nom :
+                    <input type="text"  name="name" required>
+                </label>
+
+                <label>
+                    Prénom :
+                    <input type="text"  name="surname" required>
+                </label>
+
+                <label>
+                    Pseudo :
+                    <input type="text"  name="pseudo" required>
+                </label>
+
+                <label>
+                    E-mail :
+                    <input type="text"  name="email" required>
+                </label>
+
+                <label>
+                    Téléphone :
+                    <input type="tel"  name="phone" required>
+                </label>
+
+                <label>Mot de passe :
+                    <input type="password"  name="password" required minlength="6" maxlength="20">
+                </label>
+
+                <input type="submit" id='submit' value='Modifier'>
+                <button>
+                    <a href="#">Annuler</a>
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}{{ parent() }} | Profil{% endblock %}
