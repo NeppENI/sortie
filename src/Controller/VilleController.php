@@ -19,7 +19,7 @@ class VilleController extends AbstractController
     {
         $ville = $villeRepository->findAll();
         return $this->render('admin/ville/index.html.twig',[
-            'ville' => $ville ]);
+            'ville' => $ville]);
     }
 
     #[Route('admin/ville/create', name: 'ville_form')]

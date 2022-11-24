@@ -34,14 +34,31 @@
             Rechercher
         </button>
     </div>
-
+    <hr>
     <section>
 
-        {% for ville in ville %}
-            <li>{{ ville.nom }}</li>
-        {% endfor %}
+        <table>
+            <thead>
+            <tr>
+                <th class="tg-0pky">ville</th>
+                <th class="tg-0pky">code postal</th>
+                <th class="tg-0pky">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
 
+            {% for ville in ville %}
+                <tr>
+                    <td class="tg-0pky">{{ ville.nom }}</td>
+                    <td class="tg-0pky">{{ ville.codePostal }}</td>
+                    <td class="tg-0pky">Modifier - Supprimer</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
     </section>
+    <hr>
 
     <p>Tu veux ajouter une ville? </p>
     <form action="{{ path('ville_form') }}">

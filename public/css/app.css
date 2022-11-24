@@ -7,6 +7,19 @@ li {
     list-style-type: none;
 }
 
+label {
+    display: block;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 250px;
+    max-width: 50%;
+}
+
 textarea {
     resize: none;
     height: 100px;
@@ -115,30 +128,10 @@ LOGIN PAGE
     white-space: nowrap;
 }
 
-.flash {
-    padding: 20px;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-}
+/**************
+CREATE SORTIE
+ **************/
 
-.flash-success {
-    background-color: green;
-}
-
-label {
-    display: block;
-}
-
-input,
-textarea,
-select {
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    width: 250px;
-    max-width: 50%;
-}
 
 
 
