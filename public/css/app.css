@@ -110,6 +110,14 @@ LOGIN PAGE
     white-space: nowrap;
 }
 
+/**************
+CREATE SORTIE
+ **************/
+
+label {
+    display: block;
+}
+
 
 
 
