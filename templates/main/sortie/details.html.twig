@@ -6,12 +6,12 @@
 {%  endblock %}
 
 {%  block body %}
-  <h2>{{sortie.nomDeLaSortie }}</h2>
-  <div>{{ sortie.dateSortie | date('d-m-Y')}}</div>
-  <div>{{ sortie.descriptionInfo }}</div>
-  <div>{{ sortie.campus }}</div>
-  <div>{{ sortie.ville }}</div>
-  <div>{{ sortie.rue }}</div>
-  <div>{{ sortie.codePostal }}</div>
+ <h2>{{sortie.nomDeLaSortie }}</h2>
+ <div>Date de la sortie : {{ sortie.dateSortie | date('d-m-Y')}}</div>
+  <div>Description : {{ sortie.descriptionInfo }}</div>
+  <div>Campus : {{ sortie.campus }}</div>
+  <div>Ville : {{ sortie.ville }}</div>
+  <div>Rue : {{ sortie.rue }}</div>
+  <div>Code Postal : {{ sortie.codePostal }}</div>
 
 {%  endblock %}

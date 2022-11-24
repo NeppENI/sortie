@@ -53,9 +53,12 @@ class SortieController extends AbstractController
 
         $sortieForm->handleRequest($request);
 
-        if ($sortieForm->isSubmitted()){
+        if ($sortieForm->isSubmitted() && $sortieForm->isValid()){
             $entityManager->persist($sortie);
             $entityManager->flush();
+
+            $this->addFlash('success', 'Votre sortie a bien été créée !');
+            return $this->redirectToRoute('sortie_details', ['id' =>$sortie->getId() ]);
         }
 
 

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\SortieRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: SortieRepository::class)]
 class Sortie
@@ -13,9 +14,17 @@ class Sortie
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    /**
+     * @Assert\NotBlank(message="Indiquez un nom pour la sortie")
+     * @Assert\Length(min=3, max=255)
+     */
     #[ORM\Column(type: 'string', length: 75)]
     private $nom_de_la_sortie;
 
+
+    /**
+     * @Assert\GreaterThanOrEqual(propertyPath="date_limite_inscription")
+     */
     #[ORM\Column(type: 'date')]
     private $date_sortie;
 
