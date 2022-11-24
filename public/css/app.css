@@ -127,7 +127,14 @@ LOGIN PAGE
     display: flex;
     white-space: nowrap;
 }
-
+table
+{
+    border-collapse: collapse;
+}
+td,th
+{
+    border: 1px solid black;
+}
 /**************
 CREATE SORTIE
  **************/
