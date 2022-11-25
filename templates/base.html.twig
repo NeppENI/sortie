@@ -16,24 +16,23 @@
     <header>
             <div class="navbar">
                 <div class="nav-logo">
-                    <a href="http://localhost:8085/sortie/public/" title="Accueil"> <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" /></a>
+                    <img src="{{ asset('img/sortir-logo.png') }}" alt="Sortir Logo" />
                 </div>
 
                 <div class="nav-menu">
                     <ul>
-                         <li><a href="" title="Accueil">Accueil</a></li>
-                         <li><a href="" title="Villes">Villes</a></li>
-                         <li><a href="" title="Campus">Campus</a></li>
+                         <li><a href="#" title="Accueil">Accueil</a></li>
+                         <li><a href="#" title="Villes">Villes</a></li>
+                         <li><a href="#" title="Campus">Campus</a></li>
                          <li><a href="#" title="Modifier profil">Modifier profil</a></li>
-                          <li><a href="{{ path('app_register') }}" title="CréationProfil">Créer un profil</a></li>
-
                         {% if app.user %}
-                         <li><a href="{{ path('sortie_create', {'id': 'x'}) }}" title="Créer une nouvelle sortie">Créer une sortie</a></li>
                          <li><a href="{{ path('sortie_home') }}" title="Liste de toutes les sorties">Toutes les sorties</a></li>
+                         <li><a href="{{ path('sortie_create', {'id': 'x'}) }}" title="Créer une nouvelle souris">Créer une sortie</a></li>
                          <li><a href="#" title="Profil">Mon profil</a></li>
                          <li><a href="{{ path('app_logout') }}" title="Deconnection">Se déconnecter ({{ app.user.pseudo }})</a></li>
                         {% else %}
                           <li><a href="{{ path('app_login') }}" title="Login">Se connecter</a></li>
+                          <li><a href="{{ path('app_register') }}" title="CréationProfil">Créer un profil</a></li>
                             {# todo gérer l'affichage des liens suivant role admin/user #}
                         {% endif %}
                     </ul>
@@ -41,11 +40,10 @@
             </div>
     </header>
 
-
     {# read and display all flash messages #}
     {% for label, messages in app.flashes %}
         {% for message in messages %}
-            <div class="flash flash-{{ label }}">
+            <div class="flash-{{ label }}">
                 {{ message }}
             </div>
         {% endfor %}

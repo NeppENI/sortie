@@ -41,5 +41,15 @@ class CampusController extends AbstractController
         ]);
         }
 
+    #[Route("admin/campus/delete/{id}", methods: ['GET', 'DELETE'],name: "delete_campus")]
+
+        public function delete(CampusRepository $campusRepository, EntityManagerInterface $entityManager,$id):Response
+        {
+            $campus = $campusRepository->find($id);
+            $entityManager->remove($campus);
+            $this->addFlash('success','le campus a été supprimé');
+
+            return $this->redirectToRoute('campus_index');
+        }
 
 }

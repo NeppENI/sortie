@@ -6,18 +6,31 @@
 {% block body %}
     <div><h1>Bienvenu sur la page administrateur</h1></div>
 
-    <p>Tu veux gérer les campus? </p>
-    <button class="GFG">
-           <a href ="http://localhost/sortie/public/admin/campus"> </a>
-        Clic ici
-    </button>
+    <p>Tu veux gérer, ajouter un campus? </p>
+
+    <form action="{{ path('campus_index') }}">
+        <button type="submit">gestion des campus</button>
+    </form>
+    <form action="{{ path('campus_form') }}">
+        <button type="submit">ajouter un campus</button>
+    </form>
 
 
-    <p>Tu veux gérer les villes? </p>
-    <button class="GFG">
-        <a href ="http://localhost/sortie/public/admin/ville"> </a>
-        Clic ici
-    </button>
+    <p>Tu veux gérer, ajouter une ville? </p>
+    <form action="{{ path('ville_index') }}">
+        <button type="submit">gestion des villes</button>
+    </form>
+    <form action="{{ path('ville_form') }}">
+        <button type="submit">ajouter une ville</button>
+    </form>
+
+    <p>Tu veux gérer, ajouter un utilisateur? </p>
+    <form action="#">
+        <button type="submit">gestion des utilisateurs</button>
+    </form>
+    <form action="{{ path('app_register') }}">
+        <button type="submit">ajouter un utilisateur</button>
+    </form>
 
 {% endblock %}
 
