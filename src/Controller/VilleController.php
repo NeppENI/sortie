@@ -14,7 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class VilleController extends AbstractController
 {
     #[Route('admin/ville/index', name: 'ville_index')]
-
     public function index(villeRepository $villeRepository):Response
     {
         $ville = $villeRepository->findAll();
@@ -38,5 +37,15 @@ class VilleController extends AbstractController
         return $this->render('admin/ville/create.html.twig',[
             "villeForm" => $villeForm->createView(),
         ]);
+    }
+    #[Route("admin/ville/delete/{id}", name: "delete_ville", methods: ['GET', 'DELETE'])]
+    public function delete(villeRepository $villeRepository, EntityManagerInterface $entityManager,$id):Response
+    {
+        $campus = $villeRepository->find($id);
+        $entityManager->remove($campus);
+        $entityManager->flush;
+        $this->addFlash('success','la ville a été supprimée');
+
+        return $this->redirectToRoute('ville_index');
     }
 }
