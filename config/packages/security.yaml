@@ -39,9 +39,7 @@ security:
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
-        #todo acces admin: user + gestion campus, gestion ville
-        #acces user: accueil, mon profil, profil utilisteur, créer une sortie, afficher une sortie, modifier une sortie, annuler une sortie
-        #module 8 authentification de l'utilisateur
+
 
 when@test:
     security:

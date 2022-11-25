@@ -50,7 +50,11 @@
                 {% for campus in campus %}
                     <tr>
                         <td class="tg-0pky">{{ campus.nom }}</td>
-                        <td class="tg-0pky">Modifier - Supprimer</td>
+                        <td class="tg-0pky">Modifier - <a
+                                    href="{{ path('delete_campus', {'id': 'campus'}) }}"
+                                    class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                                Supprimer
+                            </a></td>
                     </tr>
                 {% endfor %}
 
