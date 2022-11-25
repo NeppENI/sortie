@@ -8,6 +8,7 @@
 {%  block body %}
  <h2>{{sortie.nomDeLaSortie }}</h2>
  <div>Date de la sortie : {{ sortie.dateSortie | date('d-m-Y')}}</div>
+ <div>Date butoir pour l'inscription : {{ sortie.dateLimiteInscription | date('d-m-Y')}}</div>
   <div>Description : {{ sortie.descriptionInfo }}</div>
   <div>Campus : {{ sortie.campus }}</div>
   <div>Ville : {{ sortie.ville }}</div>

@@ -13,7 +13,7 @@
         </div>
 
         <div class="infos-date">
-            <h4>Nous sommes le{{ "now"|date ("D-M-Y") }}</h4>
+            <h4>Nous sommes le : {{ "now"|date ("d-m-Y") }}</h4>
         </div>
 
     </div>
@@ -147,31 +147,31 @@
     </div>
 </section>
 
-<section>
-    <table class="home-table">
-        <thead>
-        <tr>
-            <td>Nom de la sortie</td>
-            <td>Date de la sortie</td>
-            <td>Clôture</td>
-            <td>Nombre de places</td>
-            <td>Etat</td>
-            <td>Inscrit</td>
-            <td>Organisateur</td>
-            <td>Actions</td>
-        </tr>
-        </thead>
-        <tbody>
+{#<section>#}
+{#    <table class="home-table">#}
+{#        <thead>#}
+{#        <tr>#}
+{#            <td>Nom de la sortie</td>#}
+{#            <td>Date de la sortie</td>#}
+{#            <td>Clôture</td>#}
+{#            <td>Nombre de places</td>#}
+{#            <td>Etat</td>#}
+{#            <td>Inscrit</td>#}
+{#            <td>Organisateur</td>#}
+{#            <td>Actions</td>#}
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
 
-        {% for sortie in sorties %}
-        <tr>
-            <td> {{ sortie.nom }}</td>
-        </tr> {% endfor %}
+{#        {% for sortie in sorties %}#}
+{#        <tr>#}
+{#            <td> {{ sortie.nom }}</td>#}
+{#        </tr> {% endfor %}#}
 
-        </tr>
-        </tbody>
-    </table>
-</section>
+{#        </tr>#}
+{#        </tbody>#}
+{#    </table>#}
+{#</section>#}
 
 
 </body>

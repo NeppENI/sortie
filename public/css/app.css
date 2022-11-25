@@ -7,18 +7,18 @@ li {
     list-style-type: none;
 }
 
-label {
-    display: block;
-}
+/*label {*/
+/*    display: block;*/
+/*}*/
 
-input,
-textarea,
-select {
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    width: 250px;
-    max-width: 50%;
-}
+/*input,*/
+/*textarea,*/
+/*select {*/
+/*    margin-bottom: 1rem;*/
+/*    box-sizing: border-box;*/
+/*    width: 250px;*/
+/*    max-width: 50%;*/
+/*}*/
 
 textarea {
     resize: none;
@@ -127,10 +127,38 @@ LOGIN PAGE
     display: flex;
     white-space: nowrap;
 }
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+td,th
+{
+    border: 1px solid black;
+
+}
+
 
 /**************
 CREATE SORTIE
  **************/
+
+.sortie-form {
+    display: block;
+
+}
+
+.sortie-form-container input,
+textarea,
+select{
+    display: block;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 250px;
+    max-width: 50%;
+}
+
 
 
 

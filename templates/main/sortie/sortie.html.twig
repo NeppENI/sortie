@@ -2,14 +2,39 @@
 
 {%  block body %}
   <section>
+            <table class="table-sortie">
+                <thead>
+                <tr>
+                    <td>Nom de la sortie</td>
+                    <td>Date de la sortie</td>
+                    <td>Clôture</td>
+                    <td>Nombre de places</td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
     {%  for sortie in sorties %}
     <article>
+      <div class="table-list-sortie">
       <a href="{{ path('sortie_details', {'id' : sortie.id}) }}" title="Voir les infos de la sortie">
-        {{ sortie.nomDeLaSortie }}
+        {{ sortie.nomDeLaSortie }}   |   {{ sortie.campus }}   |  {{ sortie.dateSortie | date('d-m-Y')}}  |  {{ sortie.nombrePlaces }}
+      </div>
+    {% endfor %}
+        <section class="list-sortie">
+
+{#                {% for sortie in sorties %}#}
+{#                <tr>#}
+{#                    <td> {{ sortie.nomDeLaSortie }}</td>#}
+{#                    <td> {{ sortie.dateSortie | date('d-m-Y')}}</td>#}
+{#                    <td> {{ sortie.dateLimiteInscription | date('d-m-Y')}}</td>#}
+{#                    <td> {{ sortie.nombrePlaces }}</td>#}
+{#                </tr>#}
+{#                {% endfor %}#}
+        </section>
       </a>
     </article>
 
-    {% endfor %}
   </section>
 {% endblock %}
 
